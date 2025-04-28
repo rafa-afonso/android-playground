@@ -1,6 +1,8 @@
 package com.example.androidplayground
 
 import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -15,6 +17,15 @@ class MainActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        val btnClickMe = findViewById<Button>(R.id.myButton)
+        val textView = findViewById<TextView>(R.id.counter)
+
+        var counterVal = 0
+        btnClickMe.setOnClickListener {
+            counterVal++
+            textView.text = counterVal.toString()
         }
     }
 }
