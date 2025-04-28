@@ -52,49 +52,58 @@
         android:text="@string/select_date_str"
         android:textAllCaps="true" />
 
-    <com.google.android.material.divider.MaterialDivider
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="15dp"
-        app:dividerColor="@color/divider_color" />
+    <LinearLayout
+        android:id="@+id/date_selected_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
 
-    <TextView
-        android:id="@+id/selected_date_value_str"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/selected_date_default_str"
-        android:textColor="@color/primary_text_color"
-        android:textSize="25sp"
-        android:textStyle="bold" />
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            app:dividerColor="@color/divider_color" />
 
-    <TextView
-        android:id="@+id/selected_date_str"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/selected_date_str"
-        android:textColor="@color/secondary_text_color"
-        android:textSize="15sp" />
+        <TextView
+            android:id="@+id/selected_date_value_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/selected_date_default_str"
+            android:textColor="@color/primary_text_color"
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
-    <Space
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="25dp" />
+        <TextView
+            android:id="@+id/selected_date_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/selected_date_str"
+            android:textColor="@color/secondary_text_color"
+            android:textSize="15sp" />
 
-    <TextView
-        android:id="@+id/minutes_passed_value_str"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/minutes_passed_default_str"
-        android:textColor="@color/primary_text_color"
-        android:textSize="25sp"
-        android:textStyle="bold" />
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp" />
 
-    <TextView
-        android:id="@+id/minutes_passed_str"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/minutes_passed_str"
-        android:textColor="@color/secondary_text_color"
-        android:textSize="15sp" />
+        <TextView
+            android:id="@+id/minutes_passed_value_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/minutes_passed_default_str"
+            android:textColor="@color/primary_text_color"
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
+        <TextView
+            android:id="@+id/minutes_passed_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/minutes_passed_str"
+            android:textColor="@color/secondary_text_color"
+            android:textSize="15sp" />
+
+    </LinearLayout>
 </LinearLayout>
