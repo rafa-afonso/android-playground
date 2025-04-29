@@ -1,4 +1,4 @@
-package com.example.androidplayground.view
+package com.example.androidplayground.view.activities
 
 import android.os.Bundle
 import android.view.View

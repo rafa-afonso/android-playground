@@ -1,4 +1,4 @@
-package com.example.androidplayground.view
+package com.example.androidplayground.view.activities
 
 import android.app.DatePickerDialog
 import android.os.Bundle
@@ -10,15 +10,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updatePadding
+import androidx.lifecycle.ViewModelProvider
 import com.example.androidplayground.databinding.ActivityDateMinutesBinding
+import com.example.androidplayground.viewmodel.DateMinutesViewModel
 import java.time.LocalDate
-import java.time.ZoneId
-import java.time.format.DateTimeFormatter
-import java.time.temporal.ChronoUnit
 
 class DateMinutesActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDateMinutesBinding
+    private lateinit var dateMinutesViewModel: DateMinutesViewModel
 
     private lateinit var tvSelectedDate: TextView
     private lateinit var tvSelectedDateMinutes: TextView
@@ -43,21 +43,15 @@ class DateMinutesActivity : AppCompatActivity() {
         val today = LocalDate.now()
 
         DatePickerDialog(this, { _, year, month, dayOfMonth ->
-            val selectedDate = LocalDate.of(year, month + 1, dayOfMonth)
 
-            tvSelectedDate.text = selectedDate.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))
+            val dateMinutesData = dateMinutesViewModel.pickDate(year, month, dayOfMonth, today)
 
-            val differenceInMinutes = ChronoUnit.MINUTES.between(
-                selectedDate.atStartOfDay(ZoneId.systemDefault()),
-                today.atStartOfDay(ZoneId.systemDefault())
-            )
-
-            tvSelectedDateMinutes.text = differenceInMinutes.toString()
+            tvSelectedDate.text = dateMinutesData.selectedDate
+            tvSelectedDateMinutes.text = dateMinutesData.differenceInMinutes
 
             dataView.visibility = View.VISIBLE
 
         }, today.year, today.monthValue - 1, today.dayOfMonth).show()
-
 
     }
 
@@ -67,6 +61,7 @@ class DateMinutesActivity : AppCompatActivity() {
         val mainView = binding.root
         setContentView(mainView)
 
+        dateMinutesViewModel = ViewModelProvider(this)[DateMinutesViewModel::class.java]
 
         val originalPaddingLeft = mainView.paddingLeft
         val originalPaddingTop = mainView.paddingTop
