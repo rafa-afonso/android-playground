@@ -1,4 +1,4 @@
-package com.example.androidplayground.view.activities
+package com.example.androidplayground.view.activities.mvvmcalculator
 
 import android.os.Bundle
 import android.view.View
@@ -9,7 +9,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updatePadding
 import androidx.lifecycle.ViewModelProvider
 import com.example.androidplayground.databinding.ActivityMvvmCalculatorBinding
-import com.example.androidplayground.viewmodel.CalculatorViewModel
+import com.example.androidplayground.viewmodel.mvvmcalculator.CalculatorViewModel
 
 class MVVMCalculatorActivity : AppCompatActivity() {
 

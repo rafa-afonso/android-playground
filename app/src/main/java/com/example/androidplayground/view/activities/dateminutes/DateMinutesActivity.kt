@@ -1,4 +1,4 @@
-package com.example.androidplayground.view.activities
+package com.example.androidplayground.view.activities.dateminutes
 
 import android.app.DatePickerDialog
 import android.os.Bundle
@@ -12,7 +12,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updatePadding
 import androidx.lifecycle.ViewModelProvider
 import com.example.androidplayground.databinding.ActivityDateMinutesBinding
-import com.example.androidplayground.viewmodel.DateMinutesViewModel
+import com.example.androidplayground.viewmodel.dateminutes.DateMinutesViewModel
 import java.time.LocalDate
 
 class DateMinutesActivity : AppCompatActivity() {

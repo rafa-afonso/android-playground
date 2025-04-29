@@ -1,7 +1,7 @@
-package com.example.androidplayground.viewmodel
+package com.example.androidplayground.viewmodel.mvvmcalculator
 
 import androidx.lifecycle.ViewModel
-import com.example.androidplayground.model.CalculatorData
+import com.example.androidplayground.model.mvvmcalculator.CalculatorData
 
 class CalculatorViewModel : ViewModel() {
 

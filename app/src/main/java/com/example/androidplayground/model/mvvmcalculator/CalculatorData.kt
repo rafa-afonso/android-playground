@@ -1,4 +1,4 @@
-package com.example.androidplayground.model
+package com.example.androidplayground.model.mvvmcalculator
 
 data class CalculatorData(
     val num1: Int,

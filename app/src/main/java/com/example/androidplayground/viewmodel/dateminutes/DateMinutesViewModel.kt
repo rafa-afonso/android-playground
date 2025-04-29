@@ -1,7 +1,7 @@
-package com.example.androidplayground.viewmodel
+package com.example.androidplayground.viewmodel.dateminutes
 
 import androidx.lifecycle.ViewModel
-import com.example.androidplayground.model.DateMinutesData
+import com.example.androidplayground.model.dateminutes.DateMinutesData
 import java.time.LocalDate
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter

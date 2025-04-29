@@ -8,8 +8,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updatePadding
 import com.example.androidplayground.databinding.ActivityMainBinding
-import com.example.androidplayground.view.activities.DateMinutesActivity
-import com.example.androidplayground.view.activities.MVVMCalculatorActivity
+import com.example.androidplayground.view.activities.dateminutes.DateMinutesActivity
+import com.example.androidplayground.view.activities.mvvmcalculator.MVVMCalculatorActivity
 
 class MainActivity : AppCompatActivity() {
 

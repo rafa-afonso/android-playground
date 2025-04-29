@@ -9,7 +9,7 @@
     android:gravity="center"
     android:orientation="vertical"
     android:padding="24dp"
-    tools:context=".view.activities.MVVMCalculatorActivity">
+    tools:context=".view.activities.mvvmcalculator.MVVMCalculatorActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
