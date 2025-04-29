@@ -1,4 +1,4 @@
-package com.example.androidplayground
+package com.example.androidplayground.view
 
 import android.os.Bundle
 import android.view.View
@@ -7,18 +7,44 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updatePadding
+import androidx.lifecycle.ViewModelProvider
+import com.example.androidplayground.databinding.ActivityMainBinding
+import com.example.androidplayground.viewmodel.CalculatorViewModel
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+    private lateinit var calculatorViewModel: CalculatorViewModel
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setup()
+
+        val calculatorButton = binding.btnCalculate
+
+        calculatorButton.setOnClickListener {
+            val num1 = binding.etFirstValue.text.toString().toIntOrNull() ?: 0
+            val num2 = binding.etSecondValue.text.toString().toIntOrNull() ?: 0
+
+            val result = calculatorViewModel.calculateSum(num1, num2)
+
+            val tvResult = binding.tvResult
+            tvResult.text = "${result.sum}"
+
+            val resultView = binding.resultView
+            resultView.visibility = View.VISIBLE
+        }
     }
 
     private fun setup() {
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val mainView = findViewById<View>(R.id.main)
+        calculatorViewModel = ViewModelProvider(this)[CalculatorViewModel::class.java]
+
+        val mainView = binding.main
 
         val originalPaddingLeft = mainView.paddingLeft
         val originalPaddingTop = mainView.paddingTop
