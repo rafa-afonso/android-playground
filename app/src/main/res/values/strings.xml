@@ -11,4 +11,6 @@
     <string name="minutes_passed_default_str" translatable="false">--</string>
     <string name="minutes_passed_str">Minutes ago</string>
     <string name="date_in_minutes">Date in Minutes</string>
+    <string name="calculate">Calculate</string>
+    <string name="result">Result</string>
 </resources>

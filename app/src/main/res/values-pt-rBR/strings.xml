@@ -8,4 +8,6 @@
     <string name="selected_date_str">Data selecionada</string>
     <string name="minutes_passed_str">Minutos atrás</string>
     <string name="date_in_minutes">Data em minutos</string>
+    <string name="calculate">Calcular</string>
+    <string name="result">Resultado</string>
 </resources>
