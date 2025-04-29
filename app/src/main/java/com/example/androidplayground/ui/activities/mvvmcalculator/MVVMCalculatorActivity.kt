@@ -1,43 +1,49 @@
-package com.example.androidplayground.view
+package com.example.androidplayground.ui.activities.mvvmcalculator
 
-import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updatePadding
-import com.example.androidplayground.databinding.ActivityMainBinding
-import com.example.androidplayground.view.activities.dateminutes.DateMinutesActivity
-import com.example.androidplayground.view.activities.mvvmcalculator.MVVMCalculatorActivity
+import androidx.lifecycle.ViewModelProvider
+import com.example.androidplayground.databinding.ActivityMvvmCalculatorBinding
+import com.example.androidplayground.viewmodel.mvvmcalculator.CalculatorViewModel
 
-class MainActivity : AppCompatActivity() {
+class MVVMCalculatorActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMvvmCalculatorBinding
+    private lateinit var calculatorViewModel: CalculatorViewModel
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setup()
 
-        val btnMVVMCalculator = binding.btnMVVMCalculator
-        btnMVVMCalculator.setOnClickListener {
-            val intent = Intent(this, MVVMCalculatorActivity::class.java)
-            startActivity(intent)
-        }
+        val calculatorButton = binding.btnCalculate
 
-        val btnDateInMinutes = binding.btnDateMinutes
-        btnDateInMinutes.setOnClickListener {
-            val intent = Intent(this, DateMinutesActivity::class.java)
-            startActivity(intent)
+        calculatorButton.setOnClickListener {
+            val num1 = binding.etFirstValue.text.toString().toIntOrNull() ?: 0
+            val num2 = binding.etSecondValue.text.toString().toIntOrNull() ?: 0
+
+            val result = calculatorViewModel.calculateSum(num1, num2)
+
+            val tvResult = binding.tvResult
+            tvResult.text = "${result.sum}"
+
+            val resultView = binding.resultView
+            resultView.visibility = View.VISIBLE
         }
     }
 
     private fun setup() {
         enableEdgeToEdge()
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityMvvmCalculatorBinding.inflate(layoutInflater)
         val mainView = binding.root
         setContentView(mainView)
+
+        calculatorViewModel = ViewModelProvider(this)[CalculatorViewModel::class.java]
 
         val originalPaddingLeft = mainView.paddingLeft
         val originalPaddingTop = mainView.paddingTop

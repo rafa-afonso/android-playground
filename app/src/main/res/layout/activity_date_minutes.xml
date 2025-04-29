@@ -9,7 +9,7 @@
     android:gravity="center"
     android:orientation="vertical"
     android:padding="24dp"
-    tools:context=".view.activities.dateminutes.DateMinutesActivity">
+    tools:context=".ui.activities.dateminutes.DateMinutesActivity">
 
     <TextView
         android:id="@+id/calculate_your_str"
