@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Android Playground</string>
+    <string name="app_name" translatable="false">Android Playground</string>
+    <string name="select_your_playground">Select your playground</string>
+    <string name="mvvm_calculator" translatable="false">MVVM Calculator</string>
 </resources>
