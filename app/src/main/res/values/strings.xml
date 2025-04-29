@@ -10,4 +10,5 @@
     <string name="selected_date_default_str" translatable="false">01/01/2000</string>
     <string name="minutes_passed_default_str" translatable="false">--</string>
     <string name="minutes_passed_str">Minutes ago</string>
+    <string name="date_in_minutes">Date in Minutes</string>
 </resources>

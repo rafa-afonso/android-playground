@@ -7,4 +7,5 @@
     <string name="select_date_str">Selecionar data</string>
     <string name="selected_date_str">Data selecionada</string>
     <string name="minutes_passed_str">Minutos atrás</string>
+    <string name="date_in_minutes">Data em minutos</string>
 </resources>

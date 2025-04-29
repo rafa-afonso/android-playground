@@ -3,7 +3,6 @@ package com.example.androidplayground.view
 import android.app.DatePickerDialog
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -11,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updatePadding
-import com.example.androidplayground.R
+import com.example.androidplayground.databinding.ActivityDateMinutesBinding
 import java.time.LocalDate
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter
@@ -19,18 +18,21 @@ import java.time.temporal.ChronoUnit
 
 class DateMinutesActivity : AppCompatActivity() {
 
-    private var tvSelectedDate: TextView? = null
-    private var tvSelectedDateMinutes: TextView? = null
-    private var dataView: LinearLayout? = null
+    private lateinit var binding: ActivityDateMinutesBinding
+
+    private lateinit var tvSelectedDate: TextView
+    private lateinit var tvSelectedDateMinutes: TextView
+    private lateinit var dataView: LinearLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setup()
 
-        val btnSelectDate = findViewById<Button>(R.id.select_date_button)
-        tvSelectedDate = findViewById(R.id.selected_date_value_str)
-        tvSelectedDateMinutes = findViewById(R.id.minutes_passed_value_str)
-        dataView = findViewById(R.id.date_selected_data)
+        tvSelectedDate = binding.selectedDateValueStr
+        tvSelectedDateMinutes = binding.minutesPassedValueStr
+        dataView = binding.dateSelectedData
+
+        val btnSelectDate = binding.selectDateButton
         btnSelectDate.setOnClickListener {
             pickDate()
         }
@@ -43,16 +45,16 @@ class DateMinutesActivity : AppCompatActivity() {
         DatePickerDialog(this, { _, year, month, dayOfMonth ->
             val selectedDate = LocalDate.of(year, month + 1, dayOfMonth)
 
-            tvSelectedDate?.text = selectedDate.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))
+            tvSelectedDate.text = selectedDate.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))
 
             val differenceInMinutes = ChronoUnit.MINUTES.between(
                 selectedDate.atStartOfDay(ZoneId.systemDefault()),
                 today.atStartOfDay(ZoneId.systemDefault())
             )
 
-            tvSelectedDateMinutes?.text = differenceInMinutes.toString()
+            tvSelectedDateMinutes.text = differenceInMinutes.toString()
 
-            dataView?.visibility = View.VISIBLE
+            dataView.visibility = View.VISIBLE
 
         }, today.year, today.monthValue - 1, today.dayOfMonth).show()
 
@@ -61,9 +63,10 @@ class DateMinutesActivity : AppCompatActivity() {
 
     private fun setup() {
         enableEdgeToEdge()
-        setContentView(R.layout.activity_date_minutes)
+        binding = ActivityDateMinutesBinding.inflate(layoutInflater)
+        val mainView = binding.root
+        setContentView(mainView)
 
-        val mainView = findViewById<View>(R.id.main)
 
         val originalPaddingLeft = mainView.paddingLeft
         val originalPaddingTop = mainView.paddingTop

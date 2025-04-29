@@ -18,11 +18,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setup()
 
-        val mvvmCalculator = binding.btnMVVMCalculator
-        mvvmCalculator.setOnClickListener {
+        val btnMVVMCalculator = binding.btnMVVMCalculator
+        btnMVVMCalculator.setOnClickListener {
             val intent = Intent(this, MVVMCalculatorActivity::class.java)
             startActivity(intent)
-            finish()
+        }
+
+        val btnDateInMinutes = binding.btnDateMinutes
+        btnDateInMinutes.setOnClickListener {
+            val intent = Intent(this, DateMinutesActivity::class.java)
+            startActivity(intent)
         }
     }
 

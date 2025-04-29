@@ -23,11 +23,25 @@
         android:layout_height="wrap_content"
         android:layout_margin="70dp" />
 
-    <Button
-        android:id="@+id/btnMVVMCalculator"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/accent_color"
-        android:text="@string/mvvm_calculator" />
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnMVVMCalculator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/accent_color"
+            android:text="@string/mvvm_calculator" />
+
+        <Button
+            android:id="@+id/btnDateMinutes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/accent_color"
+            android:text="@string/date_in_minutes" />
+    </LinearLayout>
 
 </LinearLayout>
