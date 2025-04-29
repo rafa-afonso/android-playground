@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">Android Playground</string>
+    <string name="app_name" translatable="false">Android Playground</string>
+    <string name="select_your_playground">Select your playground</string>
+    <string name="mvvm_calculator" translatable="false">MVVM Calculator</string>
+    <string name="calculate_your_str">Calculate your</string>
+    <string name="age_str">age</string>
+    <string name="in_minutes_str">in minutes</string>
+    <string name="select_date_str">Select date</string>
+    <string name="selected_date_str">Selected date</string>
+    <string name="selected_date_default_str" translatable="false">01/01/2000</string>
+    <string name="minutes_passed_default_str" translatable="false">--</string>
+    <string name="minutes_passed_str">Minutes ago</string>
+    <string name="date_in_minutes">Date in Minutes</string>
 </resources>
