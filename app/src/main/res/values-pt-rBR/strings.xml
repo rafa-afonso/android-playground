@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="select_your_playground">Selecione o seu playground</string>
+    <string name="calculate_your_str">Calcule sua</string>
+    <string name="age_str">idade</string>
+    <string name="in_minutes_str">em minutos</string>
+    <string name="select_date_str">Selecionar data</string>
+    <string name="selected_date_str">Data selecionada</string>
+    <string name="minutes_passed_str">Minutos atrás</string>
 </resources>
