@@ -5,7 +5,7 @@
     <string name="in_minutes_str">in minutes</string>
     <string name="select_date_str">Select date</string>
     <string name="selected_date_str">Selected date</string>
-    <string name="selected_date_default_str">01/01/2000</string>
-    <string name="minutes_passed_default_str">--</string>
+    <string name="selected_date_default_str" translatable="false">01/01/2000</string>
+    <string name="minutes_passed_default_str" translatable="false">--</string>
     <string name="minutes_passed_str">Minutes ago</string>
 </resources>

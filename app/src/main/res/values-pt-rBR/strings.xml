@@ -4,7 +4,6 @@
     <string name="age_str">idade</string>
     <string name="in_minutes_str">em minutos</string>
     <string name="select_date_str">Selecionar data</string>
-    <string name="selected_date_str">Selected date</string>
-    <string name="selected_date_default_str">01/01/2000</string>
-    <string name="minutes_passed_str">Minutes ago</string>
+    <string name="selected_date_str">Data selecionada</string>
+    <string name="minutes_passed_str">Minutos atrás</string>
 </resources>
