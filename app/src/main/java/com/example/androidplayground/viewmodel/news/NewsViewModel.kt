@@ -19,7 +19,7 @@ import retrofit2.Response
 class NewsViewModel(app: Application, val newsRepository: NewsRepository) : AndroidViewModel(app) {
 
     val headlines: MutableLiveData<Resource<Headlines>> = MutableLiveData()
-    private var headlinesPage = 1
+    var headlinesPage = 1
     private var headlinesResponse: Headlines? = null
 
     val searchNews: MutableLiveData<Resource<Headlines>> = MutableLiveData()
