@@ -23,5 +23,9 @@ class RetrofitInstance {
                 .client(client)
                 .build()
         }
+
+        val newsAPI: NewsAPI by lazy {
+            retrofit.create(NewsAPI::class.java)
+        }
     }
 }
