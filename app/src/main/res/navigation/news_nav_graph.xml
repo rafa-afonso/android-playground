@@ -7,7 +7,11 @@
     <fragment
         android:id="@+id/articleFragment"
         android:name="com.example.androidplayground.ui.activities.news.fragments.ArticleFragment"
-        android:label="ArticleFragment" />
+        android:label="ArticleFragment">
+        <argument
+            android:name="article"
+            app:argType="com.example.androidplayground.model.news.Article.kt" />
+    </fragment>
     <fragment
         android:id="@+id/favoritesFragment"
         android:name="com.example.androidplayground.ui.activities.news.fragments.FavoritesFragment"
