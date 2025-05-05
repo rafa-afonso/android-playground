@@ -10,4 +10,5 @@
     <string name="date_in_minutes">Data em minutos</string>
     <string name="calculate">Calcular</string>
     <string name="result">Resultado</string>
+    <string name="mark_as_favorite">Marcar como favorito</string>
 </resources>

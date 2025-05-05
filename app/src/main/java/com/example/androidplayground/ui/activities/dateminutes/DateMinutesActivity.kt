@@ -1,4 +1,4 @@
-package com.example.androidplayground.view.activities.dateminutes
+package com.example.androidplayground.ui.activities.dateminutes
 
 import android.app.DatePickerDialog
 import android.os.Bundle
