@@ -10,6 +10,7 @@ import androidx.core.view.updatePadding
 import com.example.androidplayground.databinding.ActivityMainBinding
 import com.example.androidplayground.ui.activities.dateminutes.DateMinutesActivity
 import com.example.androidplayground.ui.activities.mvvmcalculator.MVVMCalculatorActivity
+import com.example.androidplayground.ui.activities.news.NewsActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -29,6 +30,12 @@ class MainActivity : AppCompatActivity() {
         val btnDateInMinutes = binding.btnDateMinutes
         btnDateInMinutes.setOnClickListener {
             val intent = Intent(this, DateMinutesActivity::class.java)
+            startActivity(intent)
+        }
+
+        val btnNewsApp = binding.btnNewsApp
+        btnNewsApp.setOnClickListener {
+            val intent = Intent(this, NewsActivity::class.java)
             startActivity(intent)
         }
     }
