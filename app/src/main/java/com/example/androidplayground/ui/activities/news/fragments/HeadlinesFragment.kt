@@ -23,7 +23,7 @@ import com.example.androidplayground.util.Resource
 import com.example.androidplayground.viewmodel.news.NewsViewModel
 
 
-class HeadlinesFragment : Fragment() {
+class HeadlinesFragment : Fragment(R.layout.fragment_headlines) {
 
     lateinit var binding: FragmentHeadlinesBinding
 
