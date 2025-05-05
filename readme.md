@@ -19,5 +19,6 @@ Projeto desenvolvido para fins de testes e estudos de Android - Kotlin
 ## News App
 
 - Aplicativo completo de notícias usando o [News API](https://newsapi.org/)
+- **Obs.:** Necessário adicionar API Key em um arquivo secrets.properties. Há um sample limpo disponível (secrets.properties.sample)
 - Tutorial original:  
   [![The News App in Android Studio using Kotlin | Android Knowledge](https://img.youtube.com/vi/UvaVJ0EseP0/default.jpg)](https://youtu.be/UvaVJ0EseP0?si=7N2eK2JN4WGeBG0n)
