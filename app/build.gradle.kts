@@ -96,7 +96,6 @@ dependencies {
 
     // Instrumented Unit Tests
     androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.dexmaker.mockito)
     androidTestImplementation(libs.kotlinx.coroutines.test)
     androidTestImplementation(libs.androidx.core.testing)
     androidTestImplementation(libs.truth)
