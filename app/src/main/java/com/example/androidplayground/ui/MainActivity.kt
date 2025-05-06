@@ -11,6 +11,7 @@ import com.example.androidplayground.databinding.ActivityMainBinding
 import com.example.androidplayground.ui.activities.dateminutes.DateMinutesActivity
 import com.example.androidplayground.ui.activities.mvvmcalculator.MVVMCalculatorActivity
 import com.example.androidplayground.ui.activities.news.NewsActivity
+import com.example.androidplayground.ui.activities.roomDbStudy.RoomDbStudyActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,6 +37,12 @@ class MainActivity : AppCompatActivity() {
         val btnNewsApp = binding.btnNewsApp
         btnNewsApp.setOnClickListener {
             val intent = Intent(this, NewsActivity::class.java)
+            startActivity(intent)
+        }
+
+        val btnRoomDbStudy = binding.btnRoomDbStudy
+        btnRoomDbStudy.setOnClickListener {
+            val intent = Intent(this, RoomDbStudyActivity::class.java)
             startActivity(intent)
         }
     }

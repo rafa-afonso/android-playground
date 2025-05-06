@@ -22,3 +22,9 @@ Projeto desenvolvido para fins de testes e estudos de Android - Kotlin
 - **Obs.:** Necessário adicionar API Key em um arquivo secrets.properties. Há um sample limpo disponível (secrets.properties.sample)
 - Tutorial original:  
   [![The News App in Android Studio using Kotlin | Android Knowledge](https://img.youtube.com/vi/UvaVJ0EseP0/default.jpg)](https://youtu.be/UvaVJ0EseP0?si=7N2eK2JN4WGeBG0n)
+
+## Room DB
+
+- Aplicação para estudo de ROOM DB
+- Tutorial original:  
+  [![Android Room With Multiple Tables](https://img.youtube.com/vi/A8AUtcP0rRs/default.jpg)](https://www.youtube.com/playlist?list=PLQkwcJG4YTCS3AD2C-yWtJUGTYMh5h3Zz)

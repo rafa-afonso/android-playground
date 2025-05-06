@@ -16,35 +16,17 @@
         android:theme="@style/Theme.AndroidPlayground"
         tools:targetApi="31">
         <activity
-            android:name=".ui.activities.news.NewsActivity"
-            android:exported="false" />
-        <activity
             android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ui.activities.mvvmcalculator.MVVMCalculatorActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".ui.activities.dateminutes.DateMinutesActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".ui.activities.dateminutes.DateMinutesActivity" />
+        <activity android:name=".ui.activities.mvvmcalculator.MVVMCalculatorActivity" />
+        <activity android:name=".ui.activities.news.NewsActivity" />
+        <activity android:name=".ui.activities.roomDbStudy.RoomDbStudyActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
