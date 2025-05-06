@@ -7,7 +7,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.androidplayground.R
 import com.example.androidplayground.databinding.ActivityNewsBinding
-import com.example.androidplayground.db.ArticleDB
+import com.example.androidplayground.db.news.ArticleDB
 import com.example.androidplayground.repository.NewsRepository
 import com.example.androidplayground.viewmodel.news.NewsViewModel
 import com.example.androidplayground.viewmodel.news.NewsViewModelProviderFactory

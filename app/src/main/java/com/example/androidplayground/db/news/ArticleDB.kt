@@ -1,4 +1,4 @@
-package com.example.androidplayground.db
+package com.example.androidplayground.db.news
 
 import android.content.Context
 import androidx.room.Database
