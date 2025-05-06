@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.devtools.ksp)
     id("androidx.navigation.safeargs.kotlin")
     id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
+    alias(libs.plugins.dagger.hilt)
 }
 
 android {
@@ -53,9 +54,6 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
 
     // Architectural Components
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
@@ -80,4 +78,29 @@ dependencies {
     // Glide
     implementation(libs.glide)
     ksp(libs.compiler)
+    // Dagger Hilt
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.android.compiler)
+    // Timber
+    implementation(libs.timber)
+
+    // Local Unit Tests
+    implementation(libs.androidx.core)
+    testImplementation(libs.junit)
+    testImplementation(libs.hamcrest.all)
+    testImplementation(libs.androidx.core.testing)
+    testImplementation(libs.robolectric)
+    testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation(libs.truth)
+    testImplementation(libs.mockito.core)
+
+    // Instrumented Unit Tests
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.dexmaker.mockito)
+    androidTestImplementation(libs.kotlinx.coroutines.test)
+    androidTestImplementation(libs.androidx.core.testing)
+    androidTestImplementation(libs.truth)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(libs.mockito.core)
 }

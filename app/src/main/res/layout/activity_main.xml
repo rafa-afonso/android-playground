@@ -56,6 +56,14 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/accent_color"
             android:text="@string/room_db_study" />
+
+        <Button
+            android:id="@+id/btnTesting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/accent_color"
+            android:text="@string/testing" />
+
     </LinearLayout>
 
 </LinearLayout>

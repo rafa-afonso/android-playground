@@ -28,3 +28,9 @@ Projeto desenvolvido para fins de testes e estudos de Android - Kotlin
 - Aplicação para estudo de ROOM DB
 - Tutorial original:  
   [![Android Room With Multiple Tables](https://img.youtube.com/vi/A8AUtcP0rRs/default.jpg)](https://www.youtube.com/playlist?list=PLQkwcJG4YTCS3AD2C-yWtJUGTYMh5h3Zz)
+
+## Lerning Testing practices
+
+- Aplicação com foco no estudo de testes automatizados
+- Tutorial original:  
+  [![Testing on Android](https://img.youtube.com/vi/EkfVL5vCDmo/default.jpg)](https://www.youtube.com/playlist?list=PLQkwcJG4YTCSYJ13G4kVIJ10X5zisB2Lq)

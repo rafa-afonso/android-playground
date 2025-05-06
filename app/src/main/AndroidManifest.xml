@@ -20,6 +20,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -27,6 +28,7 @@
         <activity android:name=".ui.activities.mvvmcalculator.MVVMCalculatorActivity" />
         <activity android:name=".ui.activities.news.NewsActivity" />
         <activity android:name=".ui.activities.roomDbStudy.RoomDbStudyActivity" />
+        <activity android:name=".ui.activities.testing.TestingActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
