@@ -27,4 +27,5 @@
     <string name="description">Description</string>
     <string name="date_time">Date Time</string>
     <string name="news_app">News App</string>
+    <string name="room_db_study">Room DB Study</string>
 </resources>
