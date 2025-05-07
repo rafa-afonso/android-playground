@@ -1,6 +1,6 @@
 package com.example.androidplayground.repository
 
-import com.example.androidplayground.api.RetrofitInstance
+import com.example.androidplayground.api.news.RetrofitInstance
 import com.example.androidplayground.db.news.ArticleDB
 import com.example.androidplayground.model.news.Article
 

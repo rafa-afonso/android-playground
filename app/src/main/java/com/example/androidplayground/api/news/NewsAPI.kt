@@ -1,4 +1,4 @@
-package com.example.androidplayground.api
+package com.example.androidplayground.api.news
 
 import com.example.androidplayground.model.news.Headlines
 import com.example.androidplayground.util.Constants

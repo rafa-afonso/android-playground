@@ -1,4 +1,4 @@
-package com.example.androidplayground.api
+package com.example.androidplayground.api.news
 
 import com.example.androidplayground.util.Constants
 import okhttp3.OkHttpClient
