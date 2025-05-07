@@ -104,4 +104,5 @@ dependencies {
     androidTestImplementation(libs.mockito.core)
     androidTestImplementation(libs.hilt.android.testing)
     kspAndroidTest(libs.hilt.android.compiler)
+    debugImplementation(libs.androidx.fragment.testing)
 }
