@@ -23,8 +23,7 @@ class ShoppingDaoTest {
     @get:Rule
     var instantTaskExecutorRule = InstantTaskExecutorRule()
 
-    private
-    lateinit var database: ShoppingItemDatabase
+    private lateinit var database: ShoppingItemDatabase
     private lateinit var dao: ShoppingDao
 
     @Before
