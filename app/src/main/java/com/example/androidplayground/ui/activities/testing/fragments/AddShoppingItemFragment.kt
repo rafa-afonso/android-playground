@@ -9,7 +9,9 @@ import androidx.navigation.fragment.findNavController
 import com.example.androidplayground.R
 import com.example.androidplayground.databinding.FragmentAddShoppingItemBinding
 import com.example.androidplayground.viewmodel.testing.ShoppingViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class AddShoppingItemFragment : Fragment(R.layout.fragment_add_shopping_item) {
 
     val viewModel: ShoppingViewModel by viewModels()

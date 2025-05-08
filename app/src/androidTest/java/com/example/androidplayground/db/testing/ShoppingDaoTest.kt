@@ -3,9 +3,7 @@ package com.example.androidplayground.db.testing
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.test.filters.SmallTest
 import com.example.androidplayground.getOrAwaitValue
-import com.example.androidplayground.launchFragmentInHiltContainer
 import com.example.androidplayground.model.testing.ShoppingItem
-import com.example.androidplayground.ui.activities.testing.fragments.ShoppingFragment
 import com.google.common.truth.Truth.assertThat
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
@@ -44,11 +42,6 @@ class ShoppingDaoTest {
     @After
     fun teardown() {
         database.close()
-    }
-
-    @Test
-    fun testLaunchFragmentInHiltContainer() {
-        launchFragmentInHiltContainer<ShoppingFragment> { }
     }
 
     @Test

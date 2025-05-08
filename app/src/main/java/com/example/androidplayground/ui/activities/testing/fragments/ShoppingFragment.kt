@@ -8,7 +8,9 @@ import androidx.navigation.fragment.findNavController
 import com.example.androidplayground.R
 import com.example.androidplayground.databinding.FragmentShoppingBinding
 import com.example.androidplayground.viewmodel.testing.ShoppingViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ShoppingFragment : Fragment(R.layout.fragment_shopping) {
 
     val viewModel: ShoppingViewModel by viewModels()
