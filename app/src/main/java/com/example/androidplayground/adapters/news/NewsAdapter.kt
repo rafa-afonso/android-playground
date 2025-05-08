@@ -1,4 +1,4 @@
-package com.example.androidplayground.adapters
+package com.example.androidplayground.adapters.news
 
 import android.view.LayoutInflater
 import android.view.View

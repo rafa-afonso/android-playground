@@ -2,6 +2,9 @@ package com.example.androidplayground.di
 
 import android.content.Context
 import androidx.room.Room
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
+import com.example.androidplayground.R
 import com.example.androidplayground.api.testing.PixabayAPI
 import com.example.androidplayground.db.testing.ShoppingDao
 import com.example.androidplayground.db.testing.ShoppingItemDatabase
@@ -51,5 +54,15 @@ object AppModule {
             .build()
             .create(PixabayAPI::class.java)
     }
+
+    @Singleton
+    @Provides
+    fun provideGlideInstance(
+        @ApplicationContext context: Context
+    ) = Glide.with(context).setDefaultRequestOptions(
+        RequestOptions()
+            .placeholder(R.drawable.baseline_add_photo_alternate_24)
+            .error(R.drawable.baseline_add_photo_alternate_24)
+    )
 
 }

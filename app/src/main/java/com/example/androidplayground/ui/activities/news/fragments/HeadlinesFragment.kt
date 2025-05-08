@@ -15,7 +15,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidplayground.R
-import com.example.androidplayground.adapters.NewsAdapter
+import com.example.androidplayground.adapters.news.NewsAdapter
 import com.example.androidplayground.databinding.FragmentHeadlinesBinding
 import com.example.androidplayground.ui.activities.news.NewsActivity
 import com.example.androidplayground.util.Constants
