@@ -28,3 +28,10 @@ Projeto desenvolvido para fins de testes e estudos de Android - Kotlin
 - Aplicação para estudo de ROOM DB
 - Tutorial original:  
   [![Android Room With Multiple Tables](https://img.youtube.com/vi/A8AUtcP0rRs/default.jpg)](https://www.youtube.com/playlist?list=PLQkwcJG4YTCS3AD2C-yWtJUGTYMh5h3Zz)
+
+## Dagger Hilt (Apenas referência)
+
+- Tutorial sobre DI com Dagget Hilt
+- Em vídeo:  
+  [![The Ultimate Dagger-Hilt Guide (Dependency Injection) - Android Studio Tutorial](https://img.youtube.com/vi/bbMsuI2p1DQ/default.jpg)](https://youtu.be/bbMsuI2p1DQ?si=chnaG33MzYBiKRoc)
+- [Código do tutorial](https://github.com/philipplackner/DaggerHiltCourse/tree/master)
